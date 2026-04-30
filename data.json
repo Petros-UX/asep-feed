@@ -1,5 +1,364 @@
 {
-  "last_updated": "30/04/2026 12:07",
-  "total": 0,
-  "announcements": []
+  "last_updated": "30/04/2026 12:13",
+  "total": 22,
+  "announcements": [
+    {
+      "id": "diav-Ρ9Α046ΝΚΠΔ-ΗΩ3",
+      "title": "Παράταση της προσωρινής άδειας λειτουργίας του Κεντρικού Σταδίου Κ1 του Καυτανζογλείου Εθνικού Σταδίου Θεσσαλονίκης",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ9Α046ΝΚΠΔ-ΗΩ3",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-9Ω4ΩΟΡ1Υ-Χ4Θ",
+      "title": "Συγκρότηση Επιτροπής ελέγχου καταλληλότητας ακινήτων που θα προσφερθούν για τη μίσθωση ενός ακινήτου, το οποίο θα χρησιμοποιηθεί για τη στέγαση του αμαξοστασίου του Δήμου Θεσσαλονίκης καθώς και ακινήτων  τα οποία θα χρησιμοποιηθούν τόσο για την εναπόθεση ογκωδών αντικειμένων όσο για τη στέγαση του εργοταξίου και της αποθήκης τεχνικών υπηρεσιών, και εκτός των ορίων του Δήμου Θεσσαλονίκης.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/9Ω4ΩΟΡ1Υ-Χ4Θ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΝΧΦΩ1Ο-ΚΕ0",
+      "title": "ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ 149155684-30/04/2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΝΧΦΩ1Ο-ΚΕ0",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΕΡΞΖ6-ΦΥΜ",
+      "title": "Πιστώσεις",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΕΡΞΖ6-ΦΥΜ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ5ΒΗΗ-399",
+      "title": "795 ΕΠΙΜΕΡΟΥΣ ΣΑ ΕΘΝΙΚΟ ΕΤΟΥΣ 2026 ΠΕΡΙΦΕΡΕΙΑ ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ5ΒΗΗ-399",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-9Π2ΗΩ1Χ-Η93",
+      "title": "Α.Δ.Σ._66/2026_Λήψη απόφασης περί ορισμού των στοιχείων Διαχειριστών Κίνησης Τραπεζικών Λογαριασμών Δήμου Σπάτων – Αρτέμιδος.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/9Π2ΗΩ1Χ-Η93",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΧΤΒ469Β7Ξ-ΤΒΡ",
+      "title": "Αποφάσεις Κατά Εξουσιοδότηση Συνεδρίασης 89 (Αποδοχή Ονομαστικών Καταστάσεων)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΧΤΒ469Β7Ξ-ΤΒΡ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΥΞΖ4690Ω3-ΘΝΗ",
+      "title": "Αντιδραστηρίων (ΒΚ484)  με",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΥΞΖ4690Ω3-ΘΝΗ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΥΕ5Ω16-ΙΡ4",
+      "title": "ΠΡΟΜΗΘΕΙΑ ΤΡΟΧΗΛΑΤΩΝ ΚΑΔΩΝ ΑΠΟΡΡΙΜΜΑΤΩΝ Δ.Κ. ΠΙΚΕΡΜΙΟΥ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΥΕ5Ω16-ΙΡ4",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ80Ο46ΜΨΙΦ-ΛΞ9",
+      "title": "Χρηματικό Ένταλμα Πληρωμής για την Παροχή Υπηρεσιών Διαχείρισης Ιατρικών Αποβλήτων (ECOSTER AE)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Νοσοκομεία",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ80Ο46ΜΨΙΦ-ΛΞ9",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ1Ω246ΜΗ2Ι-Λ59",
+      "title": "Σύμβαση Έργου #27259 #96251",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ1Ω246ΜΗ2Ι-Λ59",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΖ8ΗΩ1Ο-ΝΝΞ",
+      "title": "ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ 149155423-30/04/2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΖ8ΗΩ1Ο-ΝΝΞ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ε6ΩΒΩ1Ο-Η77",
+      "title": "Παροχή κινήτρου υιοθεσίας αδέσποτων ζώων συντροφιάς (σκύλων και γατών) με μείωση  δημοτικών τελών.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ε6ΩΒΩ1Ο-Η77",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6Υ52ΩΨ5-ΡΑΡ",
+      "title": "Έγκριση ή μη της 47/2026 Δημοτικής Επιτροπής με θέμα : Υποχρεωτική Αναμόρφωση προϋπολογισμού.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6Υ52ΩΨ5-ΡΑΡ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΜΜ8469ΗΤΠ-6ΣΦ",
+      "title": "ΑΠΟΔΟΣΗ ΣΕΗ ΜΑΡΤΙΟΥ 2026 ΕΑΠ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΜΜ8469ΗΤΠ-6ΣΦ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΠΙΡ469ΗΤΠ-ΛΥ5",
+      "title": "ΑΠΟΔΟΣΗ ΙΚΑ ΜΑΡΤΙΟΥ 2026 ΕΑΠ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΠΙΡ469ΗΤΠ-ΛΥ5",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-97ΘΗ469ΗΤΠ-Θ25",
+      "title": "ΑΠΟΔΟΣΗ ΦΜΥ ΜΑΡΤΙΟΥ 2026 ΕΑΠ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/97ΘΗ469ΗΤΠ-Θ25",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΔ02Ω62-Ζ0Ν",
+      "title": "Πάγια προκαταβολή 2ου Νηπιαγωγείου της ΔΚK (070.4920202)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΔ02Ω62-Ζ0Ν",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΝΔΑ469ΗΤΠ-Ο32",
+      "title": "ΑΠΟΔΟΣΗ ΠΑΣΗΣ ΦΥΣΕΩΣ ΜΑΡΤΙΟΥ 2026 ΕΑΠ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΝΔΑ469ΗΤΠ-Ο32",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΘΤ0ΩΞ5-ΓΒΞ",
+      "title": "Βελτίωση δημοτικού δικτύου Τ.Κ. Πρασσέ. Συνεχιζόμενη σύμβαση",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΘΤ0ΩΞ5-ΓΒΞ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ρ333465Θ1Ε-ΚΧΔ",
+      "title": "ΕΚΤΟΣ ΕΔΡΑΣ ΜΕΤΑΚΙΝΗΣΗ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ333465Θ1Ε-ΚΧΔ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-9178469Β7Ξ-4ΘΤ",
+      "title": "Απόφαση Ανάθεσης 89-28/04/2026 ης Συνεδρίασης, Έτους (2026)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δημόσιο",
+      "status": "active",
+      "announced_date": "2026-04-28",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/9178469Β7Ξ-4ΘΤ",
+      "source": "diavgeia"
+    }
+  ]
 }
