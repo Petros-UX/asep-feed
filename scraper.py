@@ -1,54 +1,34 @@
 """
-ASEP Feed Scraper - v8
-Trust queries + exclusion-only filtering
-Based on v6 (which found 22 results) + better exclusions
+ASEP Feed Scraper - v9
+Scrapes directly from info.asep.gr/announcements-list/7846
+This is the official ASEP announcements page - 100% relevant results!
 """
 
 import json
 import requests
+from bs4 import BeautifulSoup
 from datetime import datetime
 import re
 import time
 
 OUTPUT_FILE = "data.json"
 
+BASE_URL = "https://info.asep.gr"
+ANNOUNCEMENTS_URL = f"{BASE_URL}/announcements-list/7846"
+
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "el-GR,el;q=0.9",
 }
 
-# Αποκλείονται μόνο ξεκάθαρα άσχετα έγγραφα
-# (βασισμένο στα άσχετα που είδαμε στο v6)
-EXCLUDE = [
-    "\u03b5\u03bd\u03c4\u03bf\u03bb\u03ae \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc",    # εντολή πληρωμ
-    "\u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",       # πληρωμής
-    "\u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ce\u03bd",       # πληρωμών
-    "\u03b1\u03ba\u03af\u03bd\u03b7\u03c4",                    # ακίνητ
-    "\u03bc\u03af\u03c3\u03b8\u03c9\u03c3",                    # μίσθωσ
-    "\u03b1\u03c0\u03cc\u03b2\u03bb\u03b7\u03c4",              # αποβλητ
-    "\u03b5\u03b9\u03c3\u03c6\u03bf\u03c1\u03ac",              # εισφορά
-    "\u03b4\u03b1\u03c0\u03ac\u03bd\u03b7",                    # δαπάνη
-    "\u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1",  # προμήθεια
-    "\u03bc\u03b9\u03c3\u03b8\u03bf\u03b4\u03bf\u03c3\u03af\u03b1",   # μισθοδοσία
-    "\u03b9\u03b8\u03b1\u03b3\u03ad\u03bd\u03b5\u03b9\u03b1",  # ιθαγένεια
-    "\u03c5\u03c0\u03b5\u03c1\u03c9\u03c1\u03b9\u03b1\u03ba",  # υπερωριακ
-    "\u03b1\u03bd\u03ac\u03ba\u03bb\u03b7\u03c3\u03b7",        # ανάκληση
-    "\u03b1\u03ba\u03cd\u03c1\u03c9\u03c3\u03b7",              # ακύρωση
-    "\u03c3\u03c5\u03b3\u03ba\u03c1\u03cc\u03c4\u03b7\u03c3\u03b7 \u03b5\u03c0\u03b9\u03c4\u03c1\u03bf\u03c0",  # συγκρότηση επιτροπ
-    "\u03c0\u03b1\u03c1\u03ac\u03c4\u03b1\u03c3\u03b7",        # παράταση
-    "\u03b1\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae",        # αναστολή
-    "\u03b1\u03c0\u03bf\u03b6\u03b7\u03bc\u03af\u03c9\u03c3",  # αποζημίωσ
-    "\u03b5\u03ba\u03c0\u03c1\u03bf\u03c3\u03ce\u03c0\u03b7\u03c3\u03b7",  # εκπροσώπηση
-    "\u03c4\u03c1\u03bf\u03c0\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7",  # τροποποίηση
-    "\u03b1\u03c0\u03bf\u03b4\u03bf\u03c7\u03ad\u03c2",        # αποδοχές
-    "\u03ba\u03c1\u03b1\u03c4\u03ae\u03c3\u03b5\u03b9\u03c2 \u03b5\u03b1\u03c0",   # κρατήσεις ΕΑΠ
-    "\u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1\u03c2 \u03c3\u03c4\u03b1\u03b4\u03af",  # λειτουργίας σταδί
-]
-
 CATEGORY_MAP = {
-    "\u03b1\u03c3\u03b5\u03c0": "\u0391\u03a3\u0395\u03a0",
-    "asep": "\u0391\u03a3\u0395\u03a0",
     "1\u03ba/": "\u0391\u03a3\u0395\u03a0", "2\u03ba/": "\u0391\u03a3\u0395\u03a0",
     "3\u03ba/": "\u0391\u03a3\u0395\u03a0", "4\u03ba/": "\u0391\u03a3\u0395\u03a0",
+    "5\u03ba/": "\u0391\u03a3\u0395\u03a0",
+    "1\u03b3\u03b5/": "\u0391\u03a3\u0395\u03a0", "2\u03b3\u03b5/": "\u0391\u03a3\u0395\u03a0",
+    "1\u03b3\u03b2/": "\u0391\u03a3\u0395\u03a0", "1\u03b4\u03b1/": "\u0391\u03a3\u0395\u03a0",
+    "1\u03b3/": "\u0391\u03a3\u0395\u03a0", "2\u03b3/": "\u0391\u03a3\u0395\u03a0",
     "\u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
     "\u03b9\u03b1\u03c4\u03c1": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
     "\u03bd\u03bf\u03c3\u03b7\u03bb": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
@@ -57,7 +37,6 @@ CATEGORY_MAP = {
     "\u03c0\u03b5\u03c1\u03b9\u03c6\u03ad\u03c1": "\u0394\u03ae\u03bc\u03bf\u03b9",
     "\u03c0\u03b1\u03b9\u03b4\u03b5\u03af\u03b1": "\u0395\u03ba\u03c0\u03b1\u03af\u03b4\u03b5\u03c5\u03c3\u03b7",
     "\u03b5\u03ba\u03c0\u03b1\u03af\u03b4": "\u0395\u03ba\u03c0\u03b1\u03af\u03b4\u03b5\u03c5\u03c3\u03b7",
-    "\u03c3\u03c7\u03bf\u03bb": "\u0395\u03ba\u03c0\u03b1\u03af\u03b4\u03b5\u03c5\u03c3\u03b7",
     "\u03b1\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4": "\u0395\u03ba\u03c0\u03b1\u03af\u03b4\u03b5\u03c5\u03c3\u03b7",
     "\u03b4\u03b9\u03ba\u03b1\u03c3\u03c4": "\u0394\u03b9\u03ba\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc",
     "\u03c3\u03c4\u03c1\u03b1\u03c4": "\u03a3\u03c4\u03c1\u03b1\u03c4\u03cc\u03c2",
@@ -69,187 +48,169 @@ def detect_category(text):
     for kw, cat in CATEGORY_MAP.items():
         if kw in t:
             return cat
-    return "\u0394\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf"
+    return "\u0391\u03a3\u0395\u03a0"  # Default: ΑΣΕΠ (since all come from ASEP site)
 
-def detect_status(announced_date):
+def detect_status(date_str):
+    """All current announcements are active."""
     now = datetime.now()
     try:
-        if announced_date:
-            a = datetime.strptime(announced_date[:10], "%Y-%m-%d")
-            if a.date() > now.date():
+        if date_str:
+            d = datetime.strptime(date_str, "%Y-%m-%d")
+            if d.date() > now.date():
                 return "upcoming"
         return "active"
     except Exception:
         return "active"
 
-def is_excluded(title):
-    t = (title or "").lower()
-    return any(kw.lower() in t for kw in EXCLUDE)
-
-def parse_date(val):
-    if not val:
+def parse_greek_date(text):
+    """Parse date like '28/04/2026' or '28/04/2026 - 12:07'"""
+    if not text:
         return None
-    if isinstance(val, str) and len(val) >= 10:
-        return val[:10]
-    if isinstance(val, (int, float)) and val > 1e9:
-        try:
-            return datetime.fromtimestamp(int(val) / 1000).strftime("%Y-%m-%d")
-        except Exception:
-            return None
+    m = re.search(r'(\d{1,2})/(\d{1,2})/(\d{4})', text)
+    if m:
+        d, mo, y = m.groups()
+        return f"{y}-{mo.zfill(2)}-{d.zfill(2)}"
     return None
 
-def extract_decisions(data):
-    if isinstance(data, list):
-        return data
-    if isinstance(data, dict):
-        for key in ["decisions", "decisionList", "results", "items", "data"]:
-            val = data.get(key)
-            if isinstance(val, list):
-                return val
-            if isinstance(val, dict):
-                for sk in ["decision", "items", "list", "results"]:
-                    sv = val.get(sk)
-                    if isinstance(sv, list):
-                        return sv
-    return []
+def extract_tags(title):
+    tags = ["\u0391\u03a3\u0395\u03a0"]
+    t = title.upper()
+    for tag in ["\u03a0\u0395", "\u03a4\u0395", "\u0394\u0395", "\u03a5\u0395",
+                "\u0399\u0394\u0391\u03a7", "\u0399\u0394\u039f\u03a7", "\u03a3\u039f\u03a7", "\u03a3\u039c\u0395"]:
+        if tag in t:
+            tags.append(tag)
+    return tags
 
-def deduplicate(items):
-    seen = set()
-    result = []
-    for a in items:
-        key = re.sub(r'\s+', ' ', (a.get("title") or "").lower().strip())[:80]
-        if key and key not in seen:
-            seen.add(key)
-            result.append(a)
-    return result
+def scrape_page(url):
+    """Scrape a single page of announcements."""
+    items = []
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=20)
+        if r.status_code != 200:
+            print(f"    x HTTP {r.status_code} for {url}")
+            return items, False
 
-# Same queries as v6 (which worked well)
-QUERIES = [
-    "\u0391\u03a3\u0395\u03a0 \u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7",
-    "\u0391\u03a3\u0395\u03a0 \u03c0\u03c1\u03cc\u03c3\u03bb\u03b7\u03c8\u03b7",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b7 \u03b8\u03ad\u03c3\u03b5\u03c9\u03bd",
-    "\u03c0\u03c1\u03cc\u03c3\u03bb\u03b7\u03c8\u03b7 \u0399\u0394\u0391\u03a7 \u0399\u0394\u039f\u03a7",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b1\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4\u03ce\u03bd",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03bf",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b4\u03ae\u03bc\u03bf\u03c2",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03c0\u03b5\u03c1\u03b9\u03c6\u03ad\u03c1\u03b5\u03b9\u03b1",
-]
+        soup = BeautifulSoup(r.text, "html.parser")
 
-def scrape_diavgeia():
+        # Find announcement entries
+        # Structure: h3 with title inside an article/div, with date nearby
+        entries = []
+
+        # Try finding h3 tags with announcement titles
+        for h3 in soup.find_all("h3"):
+            title = h3.get_text(strip=True)
+            if len(title) < 5:
+                continue
+
+            # Find link
+            link = ""
+            a_tag = h3.find("a") or h3.find_parent("a")
+            if not a_tag:
+                # Look for sibling or nearby link
+                parent = h3.find_parent(["div", "article", "li"])
+                if parent:
+                    a_tag = parent.find("a", href=re.compile(r"/node/"))
+            if a_tag:
+                href = a_tag.get("href", "")
+                if href and not href.startswith("http"):
+                    href = BASE_URL + href
+                link = href
+
+            # Find date - look near the h3
+            date_str = None
+            parent = h3.find_parent(["div", "article", "li", "section"])
+            if parent:
+                # Look for date text nearby
+                text = parent.get_text(" ", strip=True)
+                date_str = parse_greek_date(text)
+
+            entries.append({
+                "title": title,
+                "link": link,
+                "date": date_str,
+            })
+
+        print(f"    -> Found {len(entries)} entries on page")
+
+        for e in entries:
+            title = e["title"]
+            link = e["link"]
+            date_str = e["date"]
+
+            # Extract positions from title
+            pos_m = re.search(r'(\d[\d\.]*)\s*\u03b8\u03ad\u03c3', title, re.I)
+            positions = None
+            if pos_m:
+                try:
+                    positions = int(pos_m.group(1).replace(".", ""))
+                except Exception:
+                    pass
+
+            items.append({
+                "id": f"asep-{abs(hash(title + (date_str or '')))}",
+                "title": title,
+                "organization": "\u0391\u03a3\u0395\u03a0",
+                "category": detect_category(title),
+                "status": detect_status(date_str),
+                "announced_date": date_str,
+                "deadline": None,
+                "positions": positions,
+                "fek": None,
+                "tags": extract_tags(title),
+                "url": link,
+                "source": "info.asep.gr",
+            })
+
+        # Check if there's a next page
+        has_next = bool(soup.find("a", string=re.compile(r"Επόμενο|Next")))
+        return items, has_next
+
+    except Exception as e:
+        print(f"    x Error scraping {url}: {e}")
+        import traceback
+        traceback.print_exc()
+        return items, False
+
+
+def scrape_asep_info(max_pages=5):
+    """Scrape multiple pages from info.asep.gr"""
     all_items = []
     seen_ids = set()
 
-    for query in QUERIES:
-        try:
-            print(f"  -> {query[:45]}...")
-            r = requests.get(
-                "https://diavgeia.gov.gr/opendata/search.json",
-                params={"q": query, "size": 20, "sort": "recent"},
-                headers=HEADERS,
-                timeout=20
-            )
-            if r.status_code != 200:
-                print(f"    x HTTP {r.status_code}")
-                time.sleep(1)
-                continue
+    for page in range(max_pages):
+        url = ANNOUNCEMENTS_URL if page == 0 else f"{ANNOUNCEMENTS_URL}?page={page}"
+        print(f"  -> Page {page + 1}: {url}")
 
-            decisions = extract_decisions(r.json())
-            accepted = 0
-            excluded = 0
+        items, has_next = scrape_page(url)
 
-            for d in decisions:
-                if not isinstance(d, dict):
-                    continue
-
-                title = ""
-                for key in ["subject", "title", "label"]:
-                    val = d.get(key)
-                    if val and isinstance(val, str) and len(val.strip()) > 5:
-                        title = val.strip()
-                        break
-                if not title:
-                    continue
-
-                # Only exclude clearly irrelevant — no required check
-                if is_excluded(title):
-                    excluded += 1
-                    print(f"    SKIP: {title[:60]}")
-                    continue
-
-                ada = d.get("ada") or d.get("protocolNumber") or ""
-                uid = ada if ada else str(abs(hash(title)))
-                if uid in seen_ids:
-                    continue
+        for item in items:
+            uid = item["id"]
+            if uid not in seen_ids:
                 seen_ids.add(uid)
+                all_items.append(item)
 
-                issue_date = None
-                for dk in ["issueDate", "submissionTimestamp", "publishDate", "date"]:
-                    issue_date = parse_date(d.get(dk))
-                    if issue_date:
-                        break
+        print(f"    OK {len(items)} items | Total so far: {len(all_items)}")
 
-                org = ""
-                for ok in ["organizationLabel", "unitLabel", "signerLabel"]:
-                    val = d.get(ok)
-                    if val and isinstance(val, str):
-                        org = val.strip()
-                        break
-                if not org:
-                    org = "\u0394\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf\u03c2 \u03a6\u03bf\u03c1\u03ad\u03b1\u03c2"
+        if not has_next:
+            print(f"    -> No more pages")
+            break
 
-                link = f"https://diavgeia.gov.gr/decision/view/{ada}" if ada else ""
-
-                pos_m = re.search(r'(\d[\d\.]*)\s*\u03b8\u03ad\u03c3', title, re.I)
-                positions = None
-                if pos_m:
-                    try:
-                        positions = int(pos_m.group(1).replace(".", ""))
-                    except Exception:
-                        pass
-
-                tags = ["\u0394\u03b9\u03b1\u03cd\u03b3\u03b5\u03b9\u03b1"]
-                for t in ["\u03a0\u0395","\u03a4\u0395","\u0394\u0395","\u03a5\u0395",
-                          "\u0399\u0394\u0391\u03a7","\u0399\u0394\u039f\u03a7",
-                          "\u039c\u03cc\u03bd\u03b9\u03bc\u03bf","\u0391\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4\u03ad\u03c2"]:
-                    if t.lower() in title.lower():
-                        tags.append(t)
-
-                all_items.append({
-                    "id": f"diav-{uid}",
-                    "title": title,
-                    "organization": org,
-                    "category": detect_category(title + " " + org),
-                    "status": detect_status(issue_date),
-                    "announced_date": issue_date,
-                    "deadline": None,
-                    "positions": positions,
-                    "fek": None,
-                    "tags": tags,
-                    "url": link,
-                    "source": "diavgeia",
-                })
-                accepted += 1
-
-            print(f"    OK accepted {accepted} | excluded {excluded} | total {len(decisions)}")
-            time.sleep(1)
-
-        except Exception as e:
-            print(f"    x Error: {e}")
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
+        time.sleep(1)
 
     return all_items
 
 
 def main():
     print("=" * 50)
-    print("ASEP Feed Scraper v8")
+    print("ASEP Feed Scraper v9")
+    print("Source: info.asep.gr (official ASEP portal)")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 50)
 
-    items = deduplicate(scrape_diavgeia())
+    print(f"\nScraping {ANNOUNCEMENTS_URL} ...")
+    items = scrape_asep_info(max_pages=5)  # Get up to 5 pages = ~50 announcements
 
+    # Sort: most recent first
     active   = sorted([a for a in items if a["status"] == "active"],
                       key=lambda x: x.get("announced_date") or "", reverse=True)
     upcoming = sorted([a for a in items if a["status"] == "upcoming"],
@@ -267,7 +228,7 @@ def main():
         }, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"OK Saved {len(all_items)} announcements")
+    print(f"OK Saved {len(all_items)} announcements from info.asep.gr")
     print(f"   Active: {len(active)} | Upcoming: {len(upcoming)} | Expired: {len(expired)}")
     print(f"{'='*50}")
 
