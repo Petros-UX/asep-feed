@@ -1,5 +1,454 @@
 {
-  "last_updated": "30/04/2026 09:19",
-  "total": 0,
-  "announcements": []
+  "last_updated": "30/04/2026 11:00",
+  "total": 27,
+  "announcements": [
+    {
+      "id": "diav-Ρ54446ΜΓ3Ξ-65Δ",
+      "title": "ΕΙΣΦΟΡΑ ΔΙΑΧΕΙΡΙΣΗΣ ΣΤΕΡΕΩΝ ΑΠΟΒΛΗΤΩΝ 2026 ΜΗΝΟΣ ΜΑΡΤΙΟΥ 2026.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ54446ΜΓ3Ξ-65Δ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-62ΓΜ46907Ι-2Ε9",
+      "title": "ΧΕ-817 ΣΕΙΡΑ Β/2026 ΚΡΑΤΗΣΕΙΣ ΕΑΠ ΑΠΡΙΛΙΟΣ 2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/62ΓΜ46907Ι-2Ε9",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΧΨ44690ΩΑ-ΣΚΚ",
+      "title": "ΑΠΟΦΑΣΗ ΑΝΑΛΗΨΗΣ ΥΠΟΧΡΕΩΣΗΣ ΛΟΓΙΣΤΗΡΙΟΥ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΧΨ44690ΩΑ-ΣΚΚ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-9ΑΩ6469Β7Ξ-7ΥΖ",
+      "title": "ΠΡΟΚΗΡΥΞΗ ΓΙΑ ΕΚΠΡΟΣΩΠΗΣΗ ΤΩΝ ΜΕΛΩΝ Ε.ΔΙ.Π. ΤΟΥ Π.Τ.Ε.Α. ΣΤΗ ΣΥΝΕΛΕΥΣΗ ΤΟΥ ΠΑΙΔΑΓΩΓΙΚΟΥ ΤΜΗΜΑΤΟΣ ΕΙΔΙΚΗΣ ΑΓΩΓΗΣ ΤΟΥ ΠΑΝΕΠΙΣΤΗΜΙΟΥ ΘΕΣΣΑΛΙΑΣ ΤΟ ΑΚΑΔΗΜΑΪΚΟ ΕΤΟΣ 2026-2027",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/9ΑΩ6469Β7Ξ-7ΥΖ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-98ΜΣ46ΜΤΛ6-390",
+      "title": "Απόκτηση ελληνικής ιθαγένειας",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/98ΜΣ46ΜΤΛ6-390",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΣ7Γ46ΜΑΠΣ-Κ21",
+      "title": "ΑΠΟΦΑΣΗ ΥΠΕΡΩΡΙΑΚΗΣ ΑΠΑΣΧΟΛΗΣΗΣ ΥΠΑΛΛΗΛΩΝ Δ/ΝΣΗΣ ΓΙΑ ΤΟΝ ΜΗΝΑ ΜΑΙΟ 2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Εκπαίδευση",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΣ7Γ46ΜΑΠΣ-Κ21",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6Μ3Β4653Π8-Π3Σ",
+      "title": "Δεύτερη έγκριση διάθεσης και κατανομής πίστωσης υπέρ Δασικών Υπηρεσιών των Επιθεωρήσεων Εφαρμογής Δασικής Πολιτικής της χώρας, για την ανάθεση υποστηρικτικών υπηρεσιών, στο πλαίσιο άσκησης αρμοδιοτήτων αυτών για την εκπόνηση μελετών και την παρακολούθηση έργων, στο πλαίσιο του Χρηματοδοτικού Προγράμματος του Πράσινου Ταμείου «Προστασία και Αναβάθμιση Δασών 2026», Άξονας Προτεραιότητας 2, Μέτρο 1, Δράση 1.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6Μ3Β4653Π8-Π3Σ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΜΖΟΩΛ4-0ΓΦ",
+      "title": "ΑΑΥ 177/2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΜΖΟΩΛ4-0ΓΦ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΝΑΤΩ6Ι-ΔΧΩ",
+      "title": "Αμοιβές νομικών και συμβολαιογράφων",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΝΑΤΩ6Ι-ΔΧΩ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΠΟ1469Β7Θ-ΚΤΡ",
+      "title": "ΑΠΟΣΠΑΣΜΑ_Green Entrans _1019_29.04.2026.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΠΟ1469Β7Θ-ΚΤΡ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-99ΥΔΩ9Ν-Σ9Φ",
+      "title": "Συγκρότηση συνεργείου υπερωριακής εργασίας των υπαλλήλων της Υπηρεσίας Δόμησης μηνός Mαΐου 2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/99ΥΔΩ9Ν-Σ9Φ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-91ΖΨ4690ΒΙ-ΓΛ8",
+      "title": "Πρόσληψη Προσωπικού ενός ατόμου με σύμβαση εργασίας ορισμένου χρόνου, ειδικότητας ΔΕ ΟΔΗΓΩΝ (ΟΔΗΓΩΝ ΟΔΗΓΟΣ ΟΧΗΜΑΤΩΝ ΠΑΡΑΔΟΣΗΣ) μέσω Προγράμματος  1500 ανέργων ηλικίας 57 ετών",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/91ΖΨ4690ΒΙ-ΓΛ8",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΘ94ΩΗΟ-ΟΙΠ",
+      "title": "ΑΝΑΛΗΨΗ ΥΠΟΧΡΕΩΣΗΣ - ΔΑΠΑΝΗ ΥΠΕΡΩΡΙΑΚΗΣ ΑΠΑΣΧΟΛΗΣΗΣ ΥΠΑΛΛΗΛΩΝ ΔΙΕΥΘΥΝΣΗΣ ΚΑΘΑΡΙΟΤΗΤΑΣ, ΠΕΡΙΒΑΛΛΟΝΤΟΣ ΚΑΙ ΑΓΡΟΤΙΚΗΣ ΠΟΛΙΤΙΚΗΣ ΜΗΝΟΣ ΜΑΪΟΥ, ΣΥΜΦΩΝΑ ΜΕ ΤΗΝ 11647/24.4.2026  (ΑΔΑ: 65Φ2ΩΗΟ-ΛΕΛ) ΑΠΟΦΑΣΗ ΣΥΓΚΡΟΤΗΣΗΣ ΣΥΝΕΡΓΕΙΟΥ - ΤΕΚΜ.11675",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Εκπαίδευση",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΘ94ΩΗΟ-ΟΙΠ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΨΨ0Κ465ΧΘΞ-98Π",
+      "title": "ΑΝΑΛΗΨΗ 305399,70€ ΑΛΕ 2420205 ΑΝΕΞΟΦΛΗΤΑ ΤΙΜ 2025 ΚΑΘΑΡΙΣΜΟΥ ΧΩΡΩΝ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΨ0Κ465ΧΘΞ-98Π",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΤΒΩΩΨΠ-Γ35",
+      "title": "Αντίτιμο ηλεκτρικού ρεύματος για φωτισμό οδών, Πλατειών και κοινοχρήστων χώρων και παραγωγικής διαδικασίας - ΔΗΜΟΤΙΚΟ ΣΧΟΛΕΙΟ ΑΡΑΧΟΥ (αρ. παρ. 8 26321813-02 1) ΓΙΑ ΤΟ ΧΡΟΝ. ΔΙΑΣΤΗΜΑ ΑΠΟ 12.12.2025 ΕΩΣ 15.03.2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΤΒΩΩΨΠ-Γ35",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΚ0Δ46ΝΠΙΘ-ΛΜΟ",
+      "title": "Επιτροπή παρακολούθησης και παραλαβής (τ. παραλαβών) για τους μήνες ΜΑΪΟ – ΙΟΥΝΙΟ – ΙΟΥΛΙΟ – ΑΥΓΟΥΣΤΟ του έτους 2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΚ0Δ46ΝΠΙΘ-ΛΜΟ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-6ΜΥΣΩ9Γ-ΟΨΓ",
+      "title": "«Προμήθεια  Ειδών Ιχθυοπωλείου για τις υπηρεσίες του Δήμου Γρεβενών»",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/6ΜΥΣΩ9Γ-ΟΨΓ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ4Ε346ΝΚΟΣ-Κ4Ι",
+      "title": "ΧΡΗΜΑΤΙΚΟ ΕΝΤΑΛΜΑ ΠΛΗΡΩΜΗΣ (ΧΕΠ35)για παροχή υπηρεσιών φύτευσης και συντήρηση χώρων πρασίνου των κήπων του ΒΧΜ και του Μουσείου Λοβέρδου-Τσίλλερ. (1τη δόση)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΤΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ4Ε346ΝΚΟΣ-Κ4Ι",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ7ΝΑΟΡΙΕ-ΛΡΜ",
+      "title": "ΑΑΥ για σύνταξη φακέλου μελέτης \"ολοκληρωμένο έργο συλλογής υπόγειας αποθήκευσης και αξιοποίησης ομβρίων υδάτων για επαναχρησιμοποίηση τους\n σε ανάγκες άρδευσης αναδασώσεων, λειτουργίας του ΔΙΚΕΠΑΖ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ7ΝΑΟΡΙΕ-ΛΡΜ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΣΧΚ46ΝΚΠΔ-ΓΨΨ",
+      "title": "«Χορήγηση άδειας άσκησης ιδιωτικού έργου με αμοιβή ΚΕΡΑΜΙΤΣΗΣ ΔΗΜΗΤΡΙΟΣ »",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΣΧΚ46ΝΚΠΔ-ΓΨΨ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΘΚΚ46ΜΖ8Ι-ΑΗΡ",
+      "title": "Ενοίκιο Παραρτήματος μηνός Μαΐου 2026.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΘΚΚ46ΜΖ8Ι-ΑΗΡ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ρ5ΓΛΩΞ4-ΖΣΛ",
+      "title": "ΧΕΠ Α426/2026: ΜΙΣΘΟΔΟΣΙΑ ΥΠΑΛΛΗΛΩΝ ΙΔΟΧ- ΕΣΠΑ (ΠΑΙΔΙΚΟΙ ΣΤΑΑΘΜΟΙ) ΥΠΗΡΕΣΙΑΣ 155 ΜΗΝΟΣ ΑΠΡΙΛΙΟΥ 2026",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-30",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΙΔΟΧ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ5ΓΛΩΞ4-ΖΣΛ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-9ΠΣΑ46904Ν-Ρ30",
+      "title": "ΠΡΟΣΚΛΗΣΗ ΚΑΤΑΘΕΣΗΣ ΠΡΟΣΦΟΡΩΝ ΓΙΑ ΑΝΤΙΜΙΚΡΟΒΙΑΚΟ-ΑΝΤΙΣΗΠΤΙΚΟ ΥΓΡΟ ΣΑΠΟΥΝΙ.",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-29",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/9ΠΣΑ46904Ν-Ρ30",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ3Δ2Ω6Θ-Θ7Υ",
+      "title": "ΕΠΙΣΚΕΥΗ ΥΠΗΡΕΣΙΑΚΟΥ ΟΧΗΜΑΤΟΣ ΣΥΜΦΩΝΑ ΜΕ ΤΗΝ 13257/22/9/2025 ΑΠΟΦΑΣΗ ΑΝΑΘΕΣΗΣ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-28",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ3Δ2Ω6Θ-Θ7Υ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-ΡΣΟ6ΩΕΡ-34Ρ",
+      "title": "Καταβολή αποζημίωσης στους αναγκαίους κληρονόμους λόγω θανάτου του υπαλλήλου κ.Γ********* Π***** του Ι*****. με σχέση εργασίας ιδιωτικού δικαίου αορίστου χρόνου (ΙΔΑΧ), σύμφωνα με τις διατάξεις άρθρ. 204 Ν. 3584/2007  [Α.Π. 2012/14.01.2026 έγγρ. Δ/νσης Διοικητικών Υπηρεσιών, υπ΄αριθμ. 1375/13.01.2026 (ΑΔΑ: 6ΖΥΜΩΕΡ-Ε3Φ) αποφ. Αντιδημάρχου Καλαμαριάς (ΦΕΚ 951/Γ'/26.02.2026)]",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-28",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΙΔΑΧ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΣΟ6ΩΕΡ-34Ρ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ψ7ΚΞ46ΝΚΠΔ-4ΡΝ",
+      "title": "20260428 ΟΡΙΣΤΙΚΗ ΤΟΠΟΘΕΤΗΣΗ ΕΚΠΑΙΔΕΥΤΙΚΩΝ ΓΕΝΙΚΗΣ ΕΚΠΑΙΔΕΥΣΗΣ ΣΕ ΕΝΑΠΟΜΕΙΝΑΣΕΣ ΟΡΓΑΝΙΚΕΣ",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Άλλο",
+      "status": "active",
+      "announced_date": "2026-04-28",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΔΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ7ΚΞ46ΝΚΠΔ-4ΡΝ",
+      "source": "diavgeia"
+    },
+    {
+      "id": "diav-Ρ3ΟΝ4653Π8-ΔΛΘ",
+      "title": "Συμφωνητικό παραχώρησης εκμετάλλευσης της συστάδας 16β δημοσίου δάσους Αλμωπίας (Τ.Κ. Βορεινού-Πευκωτού)",
+      "organization": "Δημόσιος Φορέας",
+      "category": "Δήμοι",
+      "status": "active",
+      "announced_date": "2026-04-27",
+      "deadline": null,
+      "positions": null,
+      "fek": null,
+      "tags": [
+        "Διαύγεια",
+        "ΠΕ"
+      ],
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ3ΟΝ4653Π8-ΔΛΘ",
+      "source": "diavgeia"
+    }
+  ]
 }
