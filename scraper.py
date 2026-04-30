@@ -1,6 +1,6 @@
 """
-ASEP Feed Scraper - v5
-Balanced filtering: keeps job announcements, removes clearly irrelevant content
+ASEP Feed Scraper - v6
+Trust the queries - minimal title filtering
 """
 
 import json
@@ -15,36 +15,18 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
 
-# Τουλάχιστον ΜΙΑ από αυτές τις λέξεις πρέπει να υπάρχει στον τίτλο
-REQUIRED_ANY = [
-    "proslhps", "prokhruk", "plhrwsh", "thesewn", "theseis",
-    "\u03c0\u03c1\u03cc\u03c3\u03bb\u03b7\u03c8",
-    "\u03c0\u03c1\u03bf\u03c3\u03bb\u03ae\u03c8",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be",
-    "\u03c0\u03c1\u03bf\u03ba\u03b7\u03c1\u03cd\u03c3\u03c3",
-    "\u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b7 \u03b8\u03ad\u03c3",
-    "\u03b8\u03ad\u03c3\u03b5\u03b9\u03c2",
-    "\u03b8\u03ad\u03c3\u03b5\u03c9\u03bd",
-    "\u0399\u0394\u0391\u03a7",
-    "\u0399\u0394\u039f\u03a7",
-    "\u03b1\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4",
-    "1K/", "2K/", "3K/", "4K/", "5K/",
-    "1\u039a/", "2\u039a/", "3\u039a/", "4\u039a/", "5\u039a/",
-]
-
-# Αν ο τίτλος περιέχει ΜΟΝΟ αυτές τις λέξεις (χωρίς required), απορρίπτεται
+# Μόνο αυτά αποκλείονται (ξεκάθαρα άσχετα)
 HARD_EXCLUDE = [
-    "\u03b1\u03c0\u03cc\u03b2\u03bb\u03b7\u03c4",         # αποβλητ
-    "\u03ba\u03c1\u03b1\u03c4\u03ae\u03c3\u03b5\u03b9\u03c2",  # κρατήσεις ΕΑΠ κλπ
-    "\u03b4\u03b1\u03c0\u03ac\u03bd\u03b7",               # δαπάνη
-    "\u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1",  # προμήθεια
-    "\u03b9\u03b8\u03b1\u03b3\u03ad\u03bd\u03b5\u03b9\u03b1",  # ιθαγένεια
-    "\u03c5\u03c0\u03b5\u03c1\u03c9\u03c1\u03b9\u03b1\u03ba",  # υπερωριακ
-    "\u03b1\u03bd\u03ac\u03ba\u03bb\u03b7\u03c3\u03b7",   # ανάκληση
-    "\u03b1\u03ba\u03cd\u03c1\u03c9\u03c3\u03b7",         # ακύρωση
-    "\u03b5\u03b9\u03c3\u03c6\u03bf\u03c1\u03ac",         # εισφορά
-    "\u03b1\u03c0\u03bf\u03b4\u03bf\u03c7\u03ad\u03c2",   # αποδοχές μισθού
-    "\u03bc\u03b9\u03c3\u03b8\u03bf\u03b4\u03bf\u03c3\u03af\u03b1",  # μισθοδοσία
+    "apo3lht",           # fallback ascii
+    "\u03b1\u03c0\u03cc\u03b2\u03bb\u03b7\u03c4",
+    "\u03b5\u03b9\u03c3\u03c6\u03bf\u03c1\u03ac",
+    "\u03b4\u03b1\u03c0\u03ac\u03bd\u03b7",
+    "\u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1",
+    "\u03bc\u03b9\u03c3\u03b8\u03bf\u03b4\u03bf\u03c3\u03af\u03b1",
+    "\u03b9\u03b8\u03b1\u03b3\u03ad\u03bd\u03b5\u03b9\u03b1",
+    "\u03c5\u03c0\u03b5\u03c1\u03c9\u03c1\u03b9\u03b1\u03ba",
+    "\u03ba\u03c1\u03b1\u03c4\u03ae\u03c3\u03b5\u03b9\u03c2 \u03b5\u03b1\u03c0",
+    "\u03b1\u03bd\u03ac\u03ba\u03bb\u03b7\u03c3\u03b7",
 ]
 
 CATEGORY_MAP = {
@@ -52,11 +34,9 @@ CATEGORY_MAP = {
     "asep": "\u0391\u03a3\u0395\u03a0",
     "1\u03ba/": "\u0391\u03a3\u0395\u03a0", "2\u03ba/": "\u0391\u03a3\u0395\u03a0",
     "3\u03ba/": "\u0391\u03a3\u0395\u03a0", "4\u03ba/": "\u0391\u03a3\u0395\u03a0",
-    "1k/": "\u0391\u03a3\u0395\u03a0", "2k/": "\u0391\u03a3\u0395\u03a0",
     "\u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
     "\u03b9\u03b1\u03c4\u03c1": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
     "\u03bd\u03bf\u03c3\u03b7\u03bb": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
-    "\u03b5\u03c3\u03c5": "\u039d\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03b1",
     "\u03b4\u03ae\u03bc\u03bf": "\u0394\u03ae\u03bc\u03bf\u03b9",
     "\u03b4\u03b7\u03bc\u03bf": "\u0394\u03ae\u03bc\u03bf\u03b9",
     "\u03c0\u03b5\u03c1\u03b9\u03c6\u03ad\u03c1": "\u0394\u03ae\u03bc\u03bf\u03b9",
@@ -66,7 +46,6 @@ CATEGORY_MAP = {
     "\u03b1\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4": "\u0395\u03ba\u03c0\u03b1\u03af\u03b4\u03b5\u03c5\u03c3\u03b7",
     "\u03b4\u03b9\u03ba\u03b1\u03c3\u03c4": "\u0394\u03b9\u03ba\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc",
     "\u03c3\u03c4\u03c1\u03b1\u03c4": "\u03a3\u03c4\u03c1\u03b1\u03c4\u03cc\u03c2",
-    "\u03bd\u03b1\u03c5\u03c4": "\u03a3\u03c4\u03c1\u03b1\u03c4\u03cc\u03c2",
     "\u03c4\u03c1\u03ac\u03c0\u03b5\u03b6": "\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b5\u03c2",
 }
 
@@ -88,18 +67,9 @@ def detect_status(announced_date):
     except Exception:
         return "active"
 
-def is_job_announcement(title):
-    """True if title looks like a job announcement."""
-    t = title.lower()
-    # Hard exclude: clearly irrelevant
-    for kw in HARD_EXCLUDE:
-        if kw.lower() in t:
-            return False
-    # Must have at least one job-related keyword
-    for kw in REQUIRED_ANY:
-        if kw.lower() in t:
-            return True
-    return False
+def is_excluded(title):
+    t = (title or "").lower()
+    return any(kw.lower() in t for kw in HARD_EXCLUDE)
 
 def parse_date(val):
     if not val:
@@ -113,6 +83,21 @@ def parse_date(val):
             return None
     return None
 
+def extract_decisions(data):
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        for key in ["decisions", "decisionList", "results", "items", "data"]:
+            val = data.get(key)
+            if isinstance(val, list):
+                return val
+            if isinstance(val, dict):
+                for sk in ["decision", "items", "list", "results"]:
+                    sv = val.get(sk)
+                    if isinstance(sv, list):
+                        return sv
+    return []
+
 def deduplicate(items):
     seen = set()
     result = []
@@ -125,14 +110,14 @@ def deduplicate(items):
 
 
 QUERIES = [
-    "\u0391\u03a3\u0395\u03a0 \u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b8\u03ad\u03c3\u03b5\u03c9\u03bd",
+    "\u0391\u03a3\u0395\u03a0 \u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7",
     "\u0391\u03a3\u0395\u03a0 \u03c0\u03c1\u03cc\u03c3\u03bb\u03b7\u03c8\u03b7",
     "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b7 \u03b8\u03ad\u03c3\u03b5\u03c9\u03bd",
     "\u03c0\u03c1\u03cc\u03c3\u03bb\u03b7\u03c8\u03b7 \u0399\u0394\u0391\u03a7 \u0399\u0394\u039f\u03a7",
     "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b1\u03bd\u03b1\u03c0\u03bb\u03b7\u03c1\u03c9\u03c4\u03ce\u03bd",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03bf \u03b8\u03ad\u03c3\u03b5\u03b9\u03c2",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b4\u03ae\u03bc\u03bf\u03c2 \u03b8\u03ad\u03c3\u03b5\u03b9\u03c2",
-    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03c0\u03b5\u03c1\u03b9\u03c6\u03ad\u03c1\u03b5\u03b9\u03b1 \u03b8\u03ad\u03c3\u03b5\u03b9\u03c2",
+    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03bf",
+    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03b4\u03ae\u03bc\u03bf\u03c2",
+    "\u03c0\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03be\u03b7 \u03c0\u03b5\u03c1\u03b9\u03c6\u03ad\u03c1\u03b5\u03b9\u03b1",
 ]
 
 def scrape_diavgeia():
@@ -153,55 +138,49 @@ def scrape_diavgeia():
                 time.sleep(1)
                 continue
 
-            data = r.json()
-            decisions = []
-            if isinstance(data, list):
-                decisions = data
-            elif isinstance(data, dict):
-                for key in ["decisions", "decisionList", "results", "items", "data"]:
-                    val = data.get(key)
-                    if isinstance(val, list):
-                        decisions = val; break
-                    elif isinstance(val, dict):
-                        for sk in ["decision", "items", "list", "results"]:
-                            sv = val.get(sk)
-                            if isinstance(sv, list):
-                                decisions = sv; break
-                        if decisions: break
+            decisions = extract_decisions(r.json())
+            print(f"    -> {len(decisions)} results from API")
 
             accepted = 0
             for d in decisions:
                 if not isinstance(d, dict):
                     continue
 
+                # Get title from any available field
                 title = ""
-                for key in ["subject", "title", "label"]:
+                for key in ["subject", "title", "label", "description"]:
                     val = d.get(key)
                     if val and isinstance(val, str) and len(val.strip()) > 5:
-                        title = val.strip(); break
+                        title = val.strip()
+                        break
                 if not title:
                     continue
 
-                if not is_job_announcement(title):
+                # Skip clearly irrelevant
+                if is_excluded(title):
                     continue
 
+                # Dedup by ADA
                 ada = d.get("ada") or d.get("protocolNumber") or ""
-                uid = ada or abs(hash(title))
+                uid = ada if ada else str(abs(hash(title)))
                 if uid in seen_ids:
                     continue
                 seen_ids.add(uid)
 
+                # Date
                 issue_date = None
                 for dk in ["issueDate", "submissionTimestamp", "publishDate", "date"]:
                     issue_date = parse_date(d.get(dk))
                     if issue_date:
                         break
 
+                # Organization
                 org = ""
                 for ok in ["organizationLabel", "unitLabel", "signerLabel"]:
                     val = d.get(ok)
                     if val and isinstance(val, str):
-                        org = val.strip(); break
+                        org = val.strip()
+                        break
                 if not org:
                     org = "\u0394\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf\u03c2 \u03a6\u03bf\u03c1\u03ad\u03b1\u03c2"
 
@@ -238,11 +217,13 @@ def scrape_diavgeia():
                 })
                 accepted += 1
 
-            print(f"    OK accepted {accepted} / {len(decisions)}")
+            print(f"    OK accepted {accepted}")
             time.sleep(1)
 
         except Exception as e:
             print(f"    x Error: {e}")
+            import traceback
+            traceback.print_exc()
             time.sleep(1)
 
     return all_items
@@ -250,7 +231,7 @@ def scrape_diavgeia():
 
 def main():
     print("=" * 50)
-    print("ASEP Feed Scraper v5")
+    print("ASEP Feed Scraper v6")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 50)
 
@@ -273,7 +254,7 @@ def main():
         }, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"OK Saved {len(all_items)} job announcements")
+    print(f"OK Saved {len(all_items)} announcements")
     print(f"   Active: {len(active)} | Upcoming: {len(upcoming)} | Expired: {len(expired)}")
     print(f"{'='*50}")
 
