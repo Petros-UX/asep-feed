@@ -1,24 +1,5 @@
 {
-  "last_updated": "30/04/2026 11:59",
-  "total": 1,
-  "announcements": [
-    {
-      "id": "diav-ΨΛΨΕ46Μ9ΞΗ-ΩΕΖ",
-      "title": "Προκήρυξη εκλογών για την ανάδειξη των εκπροσώπων μελών Δ.Ε.Π. των Τομέων στη Συνέλευση του Τμήματος Ηλεκτρολόγων και Ηλεκτρονικών Μηχανικών, θητείας από 01.09.2026 έως και 31.08.2027.",
-      "organization": "Δημόσιος Φορέας",
-      "category": "Δημόσιο",
-      "status": "active",
-      "announced_date": "2026-04-30",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "Διαύγεια",
-        "ΤΕ",
-        "ΔΕ"
-      ],
-      "url": "https://diavgeia.gov.gr/decision/view/ΨΛΨΕ46Μ9ΞΗ-ΩΕΖ",
-      "source": "diavgeia"
-    }
-  ]
+  "last_updated": "30/04/2026 12:07",
+  "total": 0,
+  "announcements": []
 }
