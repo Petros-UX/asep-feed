@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ΑΣΕΠ Feed — Προκηρύξεις</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F2342;
+    --navy-mid: #1B3A6B;
+    --blue: #2563EB;
+    --blue-light: #DBEAFE;
+    --gold: #B8860B;
+    --gold-light: #FEF3C7;
+    --green: #15803D;
+    --green-light: #DCFCE7;
+    --red: #B91C1C;
+    --red-light: #FEE2E2;
+    --gray: #F8FAFC;
+    --border: #E2E8F0;
+    --text: #1E293B;
+    --muted: #64748B;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F1F5F9;
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .logo-text h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-text p {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .last-updated {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    background: rgba(255,255,255,0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .refresh-btn {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .refresh-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+  .refresh-btn.spinning .icon { animation: spin 1s linear infinite; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Stats Bar */
+  .stats-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .stat-dot.active { background: var(--green); box-shadow: 0 0 0 3px var(--green-light); }
+  .stat-dot.upcoming { background: var(--gold); box-shadow: 0 0 0 3px var(--gold-light); }
+  .stat-dot.expired { background: var(--muted); }
+
+  .stat-info { line-height: 1.2; }
+  .stat-num { font-size: 1.25rem; font-weight: 600; font-family: 'Crimson Pro', serif; }
+  .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .stat-divider { width: 1px; height: 32px; background: var(--border); }
+
+  .total-positions {
+    margin-left: auto;
+    background: var(--blue-light);
+    padding: 8px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .total-positions .num {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue);
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .total-positions .lbl {
+    font-size: 0.78rem;
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  /* Main layout */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px;
+  }
+
+  /* Filters */
+  .filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-group {
+    display: flex;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .filter-btn {
+    padding: 9px 18px;
+    border: none;
+    background: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    border-right: 1px solid var(--border);
+  }
+
+  .filter-btn:last-child { border-right: none; }
+  .filter-btn:hover { background: var(--gray); color: var(--text); }
+  .filter-btn.active { background: var(--navy); color: white; }
+
+  .search-box {
+    flex: 1;
+    min-width: 220px;
+    position: relative;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-box input:focus { border-color: var(--blue); }
+
+  .search-box::before {
+    content: '🔍';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+  }
+
+  .cat-select {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    background: white;
+    color: var(--text);
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .cat-select:focus { border-color: var(--blue); }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 18px;
+  }
+
+  /* Card */
+  .card {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.2s;
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    border-color: #CBD5E1;
+  }
+
+  .card-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .badge.active { background: var(--green-light); color: var(--green); }
+  .badge.upcoming { background: var(--gold-light); color: var(--gold); }
+  .badge.expired { background: #F1F5F9; color: var(--muted); }
+
+  .fek-badge {
+    font-size: 0.72rem;
+    color: var(--muted);
+    background: var(--gray);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .card-category {
+    font-size: 0.72rem;
+    color: var(--blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .card-body {
+    padding: 14px 18px;
+  }
+
+  .card-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .card-org {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card-dates {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .date-item { flex: 1; }
+  .date-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .date-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .date-value.urgent { color: var(--red); }
+  .date-value.soon { color: var(--gold); }
+
+  .positions-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--blue-light);
+    color: var(--blue);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+
+  .tag {
+    background: var(--gray);
+    color: var(--muted);
+    padding: 3px 9px;
+    border-radius: 5px;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .card-footer {
+    padding: 12px 18px;
+    border-top: 1px solid var(--border);
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .deadline-bar {
+    flex: 1;
+    margin-right: 16px;
+  }
+
+  .deadline-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .deadline-track {
+    height: 4px;
+    background: #E2E8F0;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .deadline-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+
+  .deadline-fill.safe { background: var(--green); }
+  .deadline-fill.warning { background: var(--gold); }
+  .deadline-fill.danger { background: var(--red); }
+  .deadline-fill.done { background: var(--muted); }
+
+  .link-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .link-btn:hover { background: var(--blue); }
+
+  /* Empty state */
+  .empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+    grid-column: 1 / -1;
+  }
+
+  .empty-icon { font-size: 3rem; margin-bottom: 12px; }
+  .empty h3 { font-family: 'Crimson Pro', serif; font-size: 1.3rem; margin-bottom: 6px; color: var(--text); }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 80px 20px;
+    grid-column: 1 / -1;
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+
+  /* Error */
+  .error-banner {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--red);
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 20px;
+    margin-top: 48px;
+    font-size: 0.8rem;
+  }
+
+  footer a { color: rgba(255,255,255,0.8); }
+
+  /* Sources */
+  .sources-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 14px 24px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+    max-width: none;
+  }
+
+  .source-chip {
+    background: var(--gray);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .header-inner { padding: 14px 16px; }
+    .main { padding: 16px; }
+    .stats-inner { gap: 16px; }
+    .total-positions { margin-left: 0; }
+    .logo-text h1 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">📋</div>
+      <div class="logo-text">
+        <h1>ΑΣΕΠ Feed</h1>
+        <p>Αυτόματη Παρακολούθηση Προκηρύξεων</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="last-updated" id="lastUpdated">⏳ Φόρτωση...</span>
+      <button class="refresh-btn" onclick="loadData(true)">
+        <span class="icon">↻</span> Ανανέωση
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sources-row">
+  <span>Πηγές:</span>
+  <span class="source-chip">asep.gr</span>
+  <span class="source-chip">et.gr (ΦΕΚ)</span>
+  <span class="source-chip">diavgeia.gov.gr</span>
+  <span class="source-chip">minedu.gov.gr</span>
+  <span class="source-chip">moh.gov.gr</span>
+  <span style="margin-left:auto; color:#94A3B8;">⚡ Ανανέωση κάθε Δευτέρα</span>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-dot active"></div>
+      <div class="stat-info">
+        <div class="stat-num" id="statActive">—</div>
+        <div class="stat-label">Ενεργές</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-dot upcoming"></div>
+      <div class="stat-info">
+        <div class="stat-num" id="statUpcoming">—</div>
+        <div class="stat-label">Ερχόμενες</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-dot expired"></div>
+      <div class="stat-info">
+        <div class="stat-num" id="statExpired">—</div>
+        <div class="stat-label">Ληγμένες</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-info">
+        <div class="stat-num" id="statTotal">—</div>
+        <div class="stat-label">Σύνολο</div>
+      </div>
+    </div>
+    <div class="total-positions">
+      <span class="num" id="statPositions">—</span>
+      <span class="lbl">Συνολικές Θέσεις</span>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div id="errorBanner" style="display:none" class="error-banner">
+    ⚠️ <span id="errorText"></span>
+  </div>
+
+  <div class="filters">
+    <div class="filter-group">
+      <button class="filter-btn active" data-status="all" onclick="setStatus('all', this)">Όλες</button>
+      <button class="filter-btn" data-status="active" onclick="setStatus('active', this)">Ενεργές</button>
+      <button class="filter-btn" data-status="upcoming" onclick="setStatus('upcoming', this)">Ερχόμενες</button>
+      <button class="filter-btn" data-status="expired" onclick="setStatus('expired', this)">Ληγμένες</button>
+    </div>
+
+    <select class="cat-select" id="catSelect" onchange="setCategory(this.value)">
+      <option value="all">Όλες οι Κατηγορίες</option>
+    </select>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Αναζήτηση προκήρυξης..." oninput="filterCards()">
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Φόρτωση ανακοινώσεων...</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  ΑΣΕΠ Feed — Δεδομένα από asep.gr | et.gr | diavgeia.gov.gr<br>
+  <small>Ανανέωση κάθε Δευτέρα μέσω GitHub Actions</small>
+</footer>
+
+<script>
+// ============================================================
+// ΣΗΜΑΝΤΙΚΟ: Άλλαξε το παρακάτω URL με το URL του data.json
+// στο δικό σου GitHub repository.
+// Παράδειγμα: https://raw.githubusercontent.com/USERNAME/REPO/main/data.json
+// ============================================================
+const DATA_URL = './data.json';
+
+let allData = [];
+let currentStatus = 'all';
+let currentCategory = 'all';
+
+async function loadData(showRefresh = false) {
+  const btn = document.querySelector('.refresh-btn');
+  if (showRefresh) btn.classList.add('spinning');
+
+  try {
+    const cacheBust = `?t=${Date.now()}`;
+    const res = await fetch(DATA_URL + cacheBust);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    allData = json.announcements || [];
+
+    document.getElementById('lastUpdated').textContent =
+      `🕐 ${json.last_updated || 'Άγνωστη ημερομηνία'}`;
+    document.getElementById('errorBanner').style.display = 'none';
+
+    updateStats();
+    populateCategories();
+    filterCards();
+  } catch (err) {
+    showError('Δεν ήταν δυνατή η φόρτωση δεδομένων. Βεβαιώσου ότι το data.json υπάρχει στο repository.');
+    console.error(err);
+  } finally {
+    btn.classList.remove('spinning');
+  }
+}
+
+function showError(msg) {
+  document.getElementById('errorBanner').style.display = 'flex';
+  document.getElementById('errorText').textContent = msg;
+  document.getElementById('grid').innerHTML = `
+    <div class="empty">
+      <div class="empty-icon">📭</div>
+      <h3>Δεν βρέθηκαν δεδομένα</h3>
+      <p>Τρέξε τον scraper για να φορτωθούν ανακοινώσεις.</p>
+    </div>`;
+}
+
+function updateStats() {
+  const active = allData.filter(a => a.status === 'active').length;
+  const upcoming = allData.filter(a => a.status === 'upcoming').length;
+  const expired = allData.filter(a => a.status === 'expired').length;
+  const positions = allData.reduce((s, a) => s + (a.positions || 0), 0);
+
+  document.getElementById('statActive').textContent = active;
+  document.getElementById('statUpcoming').textContent = upcoming;
+  document.getElementById('statExpired').textContent = expired;
+  document.getElementById('statTotal').textContent = allData.length;
+  document.getElementById('statPositions').textContent =
+    positions > 0 ? positions.toLocaleString('el-GR') : '—';
+}
+
+function populateCategories() {
+  const cats = [...new Set(allData.map(a => a.category).filter(Boolean))].sort();
+  const sel = document.getElementById('catSelect');
+  const current = sel.value;
+  sel.innerHTML = '<option value="all">Όλες οι Κατηγορίες</option>';
+  cats.forEach(c => {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = c;
+    sel.appendChild(o);
+  });
+  sel.value = current;
+}
+
+function setStatus(status, el) {
+  currentStatus = status;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  filterCards();
+}
+
+function setCategory(cat) {
+  currentCategory = cat;
+  filterCards();
+}
+
+function filterCards() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const currentCat = document.getElementById('catSelect').value;
+
+  let filtered = allData.filter(a => {
+    const statusOk = currentStatus === 'all' || a.status === currentStatus;
+    const catOk = currentCat === 'all' || a.category === currentCat;
+    const searchOk = !q ||
+      (a.title || '').toLowerCase().includes(q) ||
+      (a.organization || '').toLowerCase().includes(q) ||
+      (a.tags || []).some(t => t.toLowerCase().includes(q));
+    return statusOk && catOk && searchOk;
+  });
+
+  renderCards(filtered);
+}
+
+function deadlineProgress(deadline) {
+  if (!deadline) return { pct: 100, cls: 'done' };
+  const now = new Date();
+  const end = new Date(deadline);
+  const total = 60; // approximate days window
+  const daysLeft = Math.round((end - now) / (1000 * 60 * 60 * 24));
+  if (daysLeft < 0) return { pct: 100, cls: 'done', label: 'Έληξε' };
+  const pct = Math.max(0, Math.min(100, 100 - (daysLeft / total) * 100));
+  const cls = daysLeft <= 7 ? 'danger' : daysLeft <= 21 ? 'warning' : 'safe';
+  return { pct, cls, label: `${daysLeft} μέρες` };
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '—';
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('el-GR', { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch { return dateStr; }
+}
+
+function urgencyClass(deadline) {
+  if (!deadline) return '';
+  const daysLeft = Math.round((new Date(deadline) - new Date()) / (1000 * 60 * 60 * 24));
+  if (daysLeft < 0) return '';
+  if (daysLeft <= 7) return 'urgent';
+  if (daysLeft <= 14) return 'soon';
+  return '';
+}
+
+function statusLabel(s) {
+  return { active: '● Ενεργή', upcoming: '○ Ερχόμενη', expired: '✕ Ληγμένη' }[s] || s;
+}
+
+function renderCards(data) {
+  const grid = document.getElementById('grid');
+  if (data.length === 0) {
+    grid.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">🔍</div>
+        <h3>Δεν βρέθηκαν αποτελέσματα</h3>
+        <p>Δοκίμασε διαφορετικά φίλτρα ή αναζήτηση.</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = data.map((a, i) => {
+    const prog = deadlineProgress(a.deadline);
+    const tags = (a.tags || []).slice(0, 5).map(t => `<span class="tag">${t}</span>`).join('');
+    const url = a.url ? `href="${a.url}" target="_blank"` : '';
+
+    return `
+    <div class="card" style="animation-delay:${i * 0.04}s">
+      <div class="card-header">
+        <div class="card-meta">
+          <span class="badge ${a.status}">${statusLabel(a.status)}</span>
+          ${a.fek ? `<span class="fek-badge">ΦΕΚ ${a.fek}</span>` : ''}
+        </div>
+        <span class="card-category">${a.category || ''}</span>
+      </div>
+      <div class="card-body">
+        <div class="card-title">${a.title || 'Χωρίς τίτλο'}</div>
+        <div class="card-org">🏛️ ${a.organization || '—'}</div>
+        ${a.positions ? `<div class="positions-badge">👥 ${a.positions.toLocaleString('el-GR')} θέσεις</div>` : ''}
+        <div class="card-dates">
+          <div class="date-item">
+            <div class="date-label">Ανακοίνωση</div>
+            <div class="date-value">${formatDate(a.announced_date)}</div>
+          </div>
+          <div class="date-item">
+            <div class="date-label">Προθεσμία</div>
+            <div class="date-value ${urgencyClass(a.deadline)}">${formatDate(a.deadline)}</div>
+          </div>
+        </div>
+        ${tags ? `<div class="tags">${tags}</div>` : ''}
+      </div>
+      <div class="card-footer">
+        <div class="deadline-bar">
+          <div class="deadline-label">
+            <span>Πρόοδος</span>
+            <span>${prog.label || ''}</span>
+          </div>
+          <div class="deadline-track">
+            <div class="deadline-fill ${prog.cls}" style="width:${prog.pct}%"></div>
+          </div>
+        </div>
+        ${a.url ? `<a class="link-btn" ${url}>Περισσότερα →</a>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// Load on startup
+loadData();
+</script>
+</body>
+</html>

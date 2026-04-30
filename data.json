@@ -1,0 +1,48 @@
+{
+  "last_updated": "Αρχικά δεδομένα - Τρέξε τον scraper",
+  "total": 3,
+  "announcements": [
+    {
+      "id": "sample-1",
+      "title": "Παράδειγμα: 1Κ/2025 — Πλήρωση θέσεων ΠΕ Διοικητικού",
+      "organization": "ΑΣΕΠ",
+      "category": "ΑΣΕΠ",
+      "status": "active",
+      "announced_date": "2025-03-01",
+      "deadline": "2025-06-30",
+      "positions": 450,
+      "fek": "12/Α/2025",
+      "tags": ["ΠΕ", "Διοικητικό", "Μόνιμο"],
+      "url": "https://www.asep.gr",
+      "source": "sample"
+    },
+    {
+      "id": "sample-2",
+      "title": "Παράδειγμα: Πρόσληψη ιατρικού προσωπικού — ΓΝΑ «Λαϊκό»",
+      "organization": "Γ.Ν.Α. «Λαϊκό»",
+      "category": "Νοσοκομεία",
+      "status": "upcoming",
+      "announced_date": "2025-06-01",
+      "deadline": "2025-07-15",
+      "positions": 85,
+      "fek": null,
+      "tags": ["Ιατρικό", "Νοσηλευτικό", "ΕΣΥ"],
+      "url": "https://www.asep.gr",
+      "source": "sample"
+    },
+    {
+      "id": "sample-3",
+      "title": "Παράδειγμα: Πρόσληψη αναπληρωτών εκπαιδευτικών ΠΕ/ΔΕ",
+      "organization": "Υπ. Παιδείας",
+      "category": "Εκπαίδευση",
+      "status": "active",
+      "announced_date": "2025-04-01",
+      "deadline": "2025-05-31",
+      "positions": 3200,
+      "fek": null,
+      "tags": ["Αναπληρωτές", "Εκπαίδευση", "ΠΕ", "ΔΕ"],
+      "url": "https://www.minedu.gov.gr",
+      "source": "sample"
+    }
+  ]
+}
