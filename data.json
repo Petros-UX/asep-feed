@@ -1,823 +1,329 @@
 {
-  "last_updated": "05/05/2026 11:10",
-  "total": 50,
+  "last_updated": "11/05/2026 14:01",
+  "total": 19,
   "announcements": [
     {
-      "id": "asep-1634331576469508351",
-      "title": "1ΓΕ/2026 & 2ΓΕ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
+      "id": "diav-92Ζ94690Β4-ΘΤ9",
+      "title": "ΧΕ 00600/2026",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-05-04",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78737",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/92Ζ94690Β4-ΘΤ9",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-1990843691885951502",
-      "title": "1ΓΕ/2026 και 2ΓΕ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
+      "id": "diav-ΨΖΔ846ΝΥ3Ι-ΛΛ8",
+      "title": "ΟΡΙΣΜΟΣ ΥΠΟΛΟΓΟΥ ΧΕΠ_ΚΑΡΤΑΛΟΥ ΚΑΝΝΕΣ",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-05-04",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78735",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΖΔ846ΝΥ3Ι-ΛΛ8",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-3017239036996896586",
-      "title": "3Κ/2026 : Πρόσκληση υποψηφίων για ηλεκτρονική Υποβολή Δικαιολογητικών",
+      "id": "diav-9Π0Δ465Θ1Ε-Τ76",
+      "title": "ΑΠΟΦΑΣΗ ΑΝΑΚΛΗΣΗΣ ΑΝΑΛΗΨΗΣ ΥΠΟΧΡΕΩΣΗΣ",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-04-28",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78720",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/9Π0Δ465Θ1Ε-Τ76",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-382060411030098504",
-      "title": "2ΓΕ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
+      "id": "diav-ΨΝ86465ΖΩ5-ΥΛΤ",
+      "title": "ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ 19159-11/05/2026",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-04-24",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78703",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΝ86465ΖΩ5-ΥΛΤ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-4061248998589722536",
-      "title": "1ΓΕ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
+      "id": "diav-Ψ14Ε4690ΩΖ-6Ρ7",
+      "title": "ΘΕΜΑ 8: «Έγκριση Επικαιροποιημένων Τεχνικών Προδιαγραφών ΜΠΛΟΚ ΕΝΤΥΠΩΝ ΑΠΟΔΕΙΞΗ ΠΑΡΟΧΗΣ ΥΠΗΡΕΣΙΩΝ ΜΕ ΠΙΣΤΩΣΗ».",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-04-24",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78702",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ14Ε4690ΩΖ-6Ρ7",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-8656495284535746157",
-      "title": "1Κ/2026 : Πρόσκληση υποψηφίων για ηλεκτρονική Υποβολή Δικαιολογητικών  - Κατηγορίες ΠΕ και ΥΕ",
+      "id": "diav-ΨΨ48ΙΔΞ-Ξ32",
+      "title": "Απόφαση Μεταβίβασης ΦΒ Σταθμού ΑΔ-08178",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-04-21",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΠΕ",
-        "ΥΕ"
-      ],
-      "url": "https://info.asep.gr/node/78674",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2011465374160469214",
-      "title": "Ενημέρωση σχετικά με την Προκήρυξη Πανεπιστημιακής Εκπαίδευσης (Β΄ Στάδιο) της 1Γ/2025",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-04-16",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΔΕ"
-      ],
-      "url": "https://info.asep.gr/node/78657",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2782451120715803219",
-      "title": "4Κ/2026 : Πλήθος αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-04-16",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78656",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΨ48ΙΔΞ-Ξ32",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-4451008904345474812",
-      "title": "1ΔΑ/2023 : Πλήρωση θέσεων μόνιμου προσωπικού στον Αστυνομικό Τομέα της Δικαστικής Αστυνομίας του Υπουργείου Δικαιοσύνης από επιλαχόντες",
+      "id": "diav-ΨΡΠΒ4691Ω2-Α0Υ",
+      "title": "ΑΡ. ΣΥΜΨ. 01/487_ΟΙΚ. ΕΓΓ/ΣΜΟΣ ΓΙΑ ΑΝΕΡΓΟΥΣ & ΕΡΓΑΖΟΜΕΝΟΥΣ_Α/Α ΤΜΗΜΑΤΟΣ 76706 - 74138 - 80059 - 81280 - 80271 - 74735 - 74411 - 77670 - 79274 - 79755",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-04-08",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΤΕ"
-      ],
-      "url": "https://info.asep.gr/node/78635",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2736105296309361804",
-      "title": "3Κ/2025 : Έκδοση Προσωρινών Αποτελεσμάτων Κατηγορία ΔΕ",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-04-01",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΤΕ",
-        "ΔΕ"
-      ],
-      "url": "https://info.asep.gr/node/78576",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-6403334571710168463",
-      "title": "1ΓΒ/2026 : Πλήθος αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-03-31",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78574",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΡΠΒ4691Ω2-Α0Υ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-6373215010081514575",
-      "title": "3Κ/2026 : Πλήθος αιτήσεων συμμετοχής",
+      "id": "diav-ΨΡ98ΙΔΞ-49Φ",
+      "title": "Απόφαση Μεταβίβασης ΦΒ Σταθμού ΑΔ-08181",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-27",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78554",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΡ98ΙΔΞ-49Φ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-3818729630324533610",
-      "title": "4Κ/2026 : Υποβολή Αιτήσεων Συμμετοχής",
+      "id": "diav-ΡΑΡΦΙΔΞ-ΓΡΣ",
+      "title": "Απόφαση Μεταβίβασης ΦΒ Σταθμού ΑΔ-07481",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-27",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78553",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΑΡΦΙΔΞ-ΓΡΣ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-1042287778043781453",
-      "title": "2Κ/2026 : Πλήθος αιτήσεων συμμετοχής",
+      "id": "diav-6ΤΦΔ4691Ω2-ΒΨ1",
+      "title": "ΤΠΥ.179 20/04/2026 ΗΛΕΚΤΡΟΛΟΓΙΚΕΣ ΕΡΓΑΣΙΕΣ ΜΙΚΡΟΔΑΠΑΝΗ 492.",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-19",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78521",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/6ΤΦΔ4691Ω2-ΒΨ1",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-3901433373344734501",
-      "title": "4Κ/2026 : Έκδοση ΦΕΚ Προκήρυξης  - Υποβολή Αιτήσεων Συμμετοχής",
+      "id": "diav-Ρ4ΛΠ4691Β5-7ΣΘ",
+      "title": "«Προσθήκη Υπεργολάβων στα πλαίσια της Προαίρεσης του έργου της υπ΄ αριθμ.\n28/2024 Σύμβασης «Ολοκληρωμένο Σύστημα Φροντίδας Ογκολογικών-Αιματολογικών\nΑσθενών», με κωδικό ΟΠΣ ΤΑ: 5162374, της Δράσης 16752 – Ψηφιακός\nΜετασχηματισμός του Τομέα της Υγείας, η οποία συγχρηματοδοτείται από το Ταμείο\nΑνάκαμψης και Ανθεκτικότητας»",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-18",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78512",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ4ΛΠ4691Β5-7ΣΘ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-8486534704764015688",
-      "title": "1ΓΒ/2026 : Υποβολή αιτήσεων συμμετοχής",
+      "id": "diav-9ΙΡΧ7Λ7-ΨΨ1",
+      "title": "Επιβολή προστίμου ΚΑΤΣΑΜΑΚΟΣ ΕΜΠΟΡΙΑ ΕΙΔΩΝ ΥΓΙΕΙΝΗΣ, ΕΙΣΑΓΩΓΙΚΗ, ΕΞΑΓΩΓΙΚΗ, ΕΜΠΟΡΙΚΗ ΚΑΙ ΤΕΧΝΙΚΗ ΞΕΝΟΔΟΧΕΙΑΚΗ ΜΟΝΟΠΡΟΣΩΠΗ Α.Ε",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-11",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78471",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/9ΙΡΧ7Λ7-ΨΨ1",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-8245426878389194235",
-      "title": "1ΠΔΑ/2026: Πρόσκληση εκδήλωσης ενδιαφέροντος για την κάλυψη της θέσης του Διοικητή και Προέδρου του Διοικητικού Συμβουλίου του Νομικού Προσώπου Δημοσίου Δικαίου με την επωνυμία Υπηρεσία Πολιτικής Αεροπορίας (Υ.Π.Α.)",
+      "id": "diav-6ΥΥΧ465ΖΩ5-ΞΑΟ",
+      "title": "ΕΝΤΟΛΗ ΠΛΗΡΩΜΗΣ 19227-11/05/2026",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-10",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78472",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/6ΥΥΧ465ΖΩ5-ΞΑΟ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-625783777172685203",
-      "title": "Παράταση της προθεσμίας υποβολής ενστάσεων προκήρυξη 2/2025 Τ.Ε.Κ.Α. κατηγορία ΠΕ",
+      "id": "diav-ΕΙΥΘΙΔΞ-7ΘΗ",
+      "title": "Απόφαση Τροποποίησης Βεβαίωσης Παραγωγού ΑΔ-08110",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-09",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΠΕ"
-      ],
-      "url": "https://info.asep.gr/node/78456",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-4097305476395609444",
-      "title": "4Κ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-03-09",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78446",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΕΙΥΘΙΔΞ-7ΘΗ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-52276830949228545",
-      "title": "1Κ/2025 : Παράταση της προθεσμίας υποβολής ενστάσεων -  Κατηγορίες ΠΕ και ΔΕ",
+      "id": "diav-Ρ8ΚΧΙΔΞ-ΘΒ7",
+      "title": "Απόφαση Τροποποίησης Βεβαίωσης Παραγωγού ΑΔ-08111",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-09",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΠΕ",
-        "ΔΕ"
-      ],
-      "url": "https://info.asep.gr/node/78437",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2479193185196626405",
-      "title": "1Κ/2026 : Πλήθος αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-03-09",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78435",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/Ρ8ΚΧΙΔΞ-ΘΒ7",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-7563380418878223770",
-      "title": "3Κ/2026 : Υποβολή αιτήσεων συμμετοχής",
+      "id": "diav-ΕΦΜΜΩΡ0-Β69",
+      "title": "ΣΥΜΒΑΣΗ ΕΡΓΑΣΙΑΣ ΙΔΙΩΤΙΚΟΥ ΔΙΚΑΙΟΥ ΟΡΙΣΜΕΝΟΥ ΧΡΟΝΟΥ",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-09",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78433",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΕΦΜΜΩΡ0-Β69",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-1553405907884187094",
-      "title": "2ΓΒ/2025 : Έκδοση οριστικών αποτελεσμάτων",
+      "id": "diav-ΡΓΔΖΟΞΞ1-ΤΝ1",
+      "title": "Ανάθεση για εγκατάσταση τριφασικού μετρητή ενεργειας και λαμπτήρων στη ΔΗΛΑΧ",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-03-06",
+      "announced_date": "2026-05-11",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΤΕ"
-      ],
-      "url": "https://info.asep.gr/node/78432",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-5244849807852093920",
-      "title": "Δημόσια Πρόσκληση της Δ.ΥΠ.Α για τη συμμετοχή 10 ανέργων κατοίκων του δήμου Μεγαρέων στο Ειδικό πρόγραμμα απασχόλησης 110 ανέργων κατοίκων των πυρόπληκτων περιοχών της Αττικής στους πυρόπληκτους δήμους από τις πυρκαγιές που εκδηλώθηκαν από 11-13.08.24",
-      "organization": "ΑΣΕΠ",
-      "category": "Δήμοι",
-      "status": "active",
-      "announced_date": "2026-03-05",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΠΕ"
-      ],
-      "url": "https://info.asep.gr/node/78426",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2399306421368468463",
-      "title": "1ΓΒ/2023 : Πρακτική δοκιμασία «ΕΞΕΤΑΣΗ ΟΡΘΟΦΩΝΙΑΣ» για την πλήρωση θέσεων από αναπλήρωση του κλάδου ΤΕ Πληροφοριών Πτήσεων (AFISO)",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-03-04",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΤΕ"
-      ],
-      "url": "https://info.asep.gr/node/78422",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-6555488572039217948",
-      "title": "2Κ/2026 : Υποβολή αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-03-03",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78408",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΡΓΔΖΟΞΞ1-ΤΝ1",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-7614972048195310546",
-      "title": "5Κ/2023 : Πρόσκληση για υποβολή δικαιολογητικών από επιλαχόντες",
+      "id": "diav-ΨΟΦΜΩΕΦ-8ΙΧ",
+      "title": "Υπ' αρίθ.6/2026 Απόφαση Τ.Σ. Ν. Στύρων με θέμα: «Εξέταση αιτήματος για παραχώρηση χώρου από το κοινοτικό κατάστημα Ν. Στύρων προκειμένου για να το δηλώσει ως έδρα στη Δ.Ο.Υ Κύμης το συσταθέν επαγγελματικό σωματείο με την επωνυμία «Σύλλογος Ξενοδόχων & Τουριστικών καταλυμάτων Δ.Ε. Στυρέων με το διακριτικό τίτλο Styra Hotels»",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-02-27",
+      "announced_date": "2026-05-10",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
-        "ΑΣΕΠ",
-        "ΤΕ"
-      ],
-      "url": "https://info.asep.gr/node/78404",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-7539481741665291811",
-      "title": "1ΓΒ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-27",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78396",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/ΨΟΦΜΩΕΦ-8ΙΧ",
+      "source": "diavgeia"
     },
     {
-      "id": "asep-999704354804546533",
-      "title": "3Κ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
+      "id": "diav-Ψ4Ο8ΟΕ8Τ-ΞΓΑ",
+      "title": "ΑΠΟΦ ΔΣ ΕΞΕΤΑΣΗΣ ΣΥΜΜΕΤΟΧΗΣ ΤΗΣ ΕΠΙΧΕΙΡΗΣΗΣ ΣΤΟ ΕΥΡΩΠΑΙΚΟ ΕΡΓΟ «EUROPEAN  HEALTH & SPA DESTINATIONS»",
       "organization": "ΑΣΕΠ",
       "category": "ΑΣΕΠ",
       "status": "active",
-      "announced_date": "2026-02-26",
+      "announced_date": "2026-05-07",
       "deadline": null,
       "positions": null,
       "fek": null,
       "tags": [
+        "Διαύγεια",
         "ΑΣΕΠ"
       ],
-      "url": "https://info.asep.gr/node/78393",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-4354192023095626853",
-      "title": "6Κ/2018 : Πρόσκληση για τη διενέργεια υγειονομικών εξετάσεων",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-24",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78374",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2620635380536464691",
-      "title": "2Κ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-18",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78347",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2521485607151335635",
-      "title": "6Κ/2023 : Κλήρωση ισοβαθμούντων υποψηφίων κλάδου/ειδικότητας ΔΕ ΔΙΟΙΚΗΤΙΚΟΥ-ΛΟΓΙΣΤΙΚΟΥ",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-18",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΔΕ"
-      ],
-      "url": "https://info.asep.gr/node/78338",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-9051281564984247395",
-      "title": "4Κ/2025 και  6Κ/2025: Ενεργοποίηση Ηλεκτρονικής Εφαρμογής Λογισμικού Ανοικτής Κληρωτίδας",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-17",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78331",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-4618900833556746453",
-      "title": "1Κ/2026 : Υποβολή αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-17",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78320",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-5480181033066160459",
-      "title": "1Κ/2025 και 3Κ/2025: Eνεργοποίηση Ηλεκτρονικής Εφαρμογής Λογισμικού  Ανοικτής Κληρωτίδας",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-13",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78307",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-5890556399139710464",
-      "title": "3Κ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-11",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78298",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-8533343726488977705",
-      "title": "1Κ/2026 : Έκδοση ΦΕΚ Προκήρυξης",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-10",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78282",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-8053925473329388741",
-      "title": "1ΓΒ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-09",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78281",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-9096824081816822019",
-      "title": "2Κ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-02-03",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78257",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-3885239892011177937",
-      "title": "2Γ/2024 : Πλήρωση θέσεων μόνιμου προσωπικού από πίνακα επιλαχόντων  στην Υπηρεσία Πολιτικής Αεροπορίας  (Υπουργείο Υποδομών και Μεταφορών)",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-01-28",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78230",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-898138539689525893",
-      "title": "1Κ/2026 : Αποστολή στο Εθνικό Τυπογραφείο",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-01-27",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78226",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-5348473250484989683",
-      "title": "5Ε/2020 : Πλήρωση θέσης Ειδικού Επιστημονικού Προσωπικού (Ε.Ε.Π.) στην Ελληνική Στατιστική Αρχή (ΕΛ.ΣΤΑΤ.) από πίνακα επιλαχόντων",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-01-26",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78206",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2728489431216001803",
-      "title": "6Κ/2025 : Πρόσκληση υποψηφίων για ηλεκτρονική Υποβολή Δικαιολογητικών",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2026-01-08",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78153",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-4964749737715562533",
-      "title": "8Κ/2024 : Παράταση της προθεσμίας Υποβολής Ενστάσεων Κατηγορία ΔΕ",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-22",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΔΕ"
-      ],
-      "url": "https://info.asep.gr/node/78087",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-8668469578534459005",
-      "title": "2Γ/2025 : Οι υποψήφιοι αξιολογούν τη γραπτή ηλεκτρονική εξέταση",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-22",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78086",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2217188927958685206",
-      "title": "4ΓΒ/2025 : Πλήθος Αιτήσεων Συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-18",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78051",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-6674088710901467875",
-      "title": "1Κ/2024 : Ενεργοποίηση Ηλεκτρονικής  Εφαρμογής Λογισμικού Ανοικτής Κληρωτίδας",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-15",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78007",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-3922406270140993864",
-      "title": "6Κ/2025 :  Πλήθος αιτήσεων συμμετοχής",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-15",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/78005",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-2143088562524049785",
-      "title": "2ΓΒ/2025 : Ενεργοποίηση Ηλεκτρονικής  Εφαρμογής Λογισμικού Ανοικτής Κληρωτίδας",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-11",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ"
-      ],
-      "url": "https://info.asep.gr/node/77996",
-      "source": "info.asep.gr"
-    },
-    {
-      "id": "asep-3216965592514378515",
-      "title": "1Κ/2024 : Διενέργεια αθλητικών και ψυχοτεχνικών δοκιμασιών υποψηφίων για τη στελέχωση της Δημοτικής Αστυνομίας Κατηγορίες ΠΕ και ΤΕ",
-      "organization": "ΑΣΕΠ",
-      "category": "ΑΣΕΠ",
-      "status": "active",
-      "announced_date": "2025-12-05",
-      "deadline": null,
-      "positions": null,
-      "fek": null,
-      "tags": [
-        "ΑΣΕΠ",
-        "ΠΕ",
-        "ΤΕ"
-      ],
-      "url": "https://info.asep.gr/node/77968",
-      "source": "info.asep.gr"
+      "url": "https://diavgeia.gov.gr/decision/view/Ψ4Ο8ΟΕ8Τ-ΞΓΑ",
+      "source": "diavgeia"
     }
   ]
 }
